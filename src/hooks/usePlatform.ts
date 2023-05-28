@@ -1,10 +1,22 @@
-import paltform from "../data/paltform";
+import paltforms from "../data/paltform";
+import { useQuery } from "@tanstack/react-query";
+import apiClient from "../services/api-client";
+import { FecthData } from "./useData";
 export interface Platforms {
   id: number;
   name: string;
   slug: string;
 }
 
-const usePlatform = () => ({ data: paltform, error: null, isLoading: false });
+const usePlatform = () =>
+  useQuery({
+    queryKey: ["platforms"],
+    queryFn: () =>
+      apiClient
+        .get<FecthData<Platforms>>("/platforms/lists/parents")
+        .then((res) => res.data),
+    staleTime: 24 * 60 * 60 * 1000,
+    initialData: { count: paltforms.length, results: paltforms },
+  });
 
 export default usePlatform;
