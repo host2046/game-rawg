@@ -1,7 +1,7 @@
 import paltforms from "../data/paltform";
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/api-client";
-import { FecthData } from "./useData";
+import apiClient, { FecthData } from "../services/api-client";
+
 export interface Platforms {
   id: number;
   name: string;
