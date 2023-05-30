@@ -1,9 +1,9 @@
 import { Fragment } from "react";
-import useGame from "../../hooks/useGame";
+import useGame from "./useGame";
 import { Text, SimpleGrid, Spinner } from "@chakra-ui/react";
 import CardGame from "./CardGame";
-import CardgameContaainer from "../UI/CardgameContaainer";
-import LoadingSkeketon from "./LoadingSkeketon";
+import CardgameContaainer from "../components/UI/CardgameContaainer";
+import LoadingSkeketon from "../components/Main/LoadingSkeketon";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const GameGrid = () => {

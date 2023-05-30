@@ -7,8 +7,8 @@ import {
   Spinner,
   Heading,
 } from "@chakra-ui/react";
-import useGenre, { Genre } from "../../hooks/useGenre";
-import useGameQueryStore from "../../store/store";
+import useGenre, { Genre } from "./useGenre";
+import useGameQueryStore from "../store/store";
 
 const GenreList = () => {
   const { error, data, isLoading } = useGenre();
