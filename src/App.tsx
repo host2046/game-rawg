@@ -1,13 +1,12 @@
 import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
-import { useState } from "react";
-import GameGrid from "./components/Main/GameGrid";
 import NavBar from "./components/NavBar/NavBar";
-import GenreList from "./components/SidePanel/GenreList";
+import GameGrid from "./games/GameGrid";
+import GenreList from "./genere/GenreList";
 
-import PlatformSelector from "./components/Main/PlatformSelector";
+import PlatformSelector from "./platforms/PlatformSelector";
 
-import GameHeading from "./components/Main/GameHeading";
 import SortOrderSelecter from "./components/Main/SortOrderSelecter";
+import GameHeading from "./games/GameHeading";
 
 const App = () => {
   return (
