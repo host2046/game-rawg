@@ -21,6 +21,11 @@ class ApiClient<T> {
       .get<FecthData<T>>(this.endPoint, config)
       .then((res) => res.data);
   };
+  get = (id: string | number) => {
+    return axiosinstance
+      .get<T>(this.endPoint + "/" + id)
+      .then((res) => res.data);
+  };
 }
 
 export default ApiClient;
