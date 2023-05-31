@@ -3,7 +3,7 @@ import ms from "ms";
 import paltforms from "./paltform";
 
 import ApiClient from "../services/api-client";
-import { Platform } from "../games/useGame";
+import { Platform } from "../entities/Platform";
 
 const apiClient = new ApiClient<Platform>("/platforms/lists/parents");
 const usePlatform = () =>
