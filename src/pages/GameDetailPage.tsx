@@ -1,16 +1,8 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  SimpleGrid,
-  Spinner,
-  Text,
-} from "@chakra-ui/react";
+import { Heading, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
-import DefinitionItem from "../components/DefinitionItem";
 import ExpendableText from "../components/ExpendableText";
 import GameAttributes from "../components/GameAttributes";
-import CriticScore from "../components/Main/CriticScore";
+import GameTrailer from "../components/GameTrailer";
 
 import useGame from "../hooks/use-games";
 
@@ -25,6 +17,7 @@ const GameDetailPage = () => {
       <Heading>{game.name}</Heading>
       <ExpendableText>{game.description_raw}</ExpendableText>
       <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
     </>
   );
 };
