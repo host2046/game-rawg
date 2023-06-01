@@ -8,7 +8,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import useGenre from "./useGenre";
-import { Genre } from "../entities/Genre";
+import Genre from "../entities/Genre";
 import useGameQueryStore from "../store/store";
 
 const GenreList = () => {
